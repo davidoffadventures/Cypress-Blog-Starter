@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-/TestReport
+/TestReport/*.html
 
 # next.js
 /.next/
