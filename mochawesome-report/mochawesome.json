@@ -1,0 +1,180 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-10-18T09:11:44.799Z",
+    "end": "2021-10-18T09:11:57.522Z",
+    "duration": 12723,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "37863dd3-2175-493e-a4bd-f3c4387bdbe0",
+      "title": "",
+      "fullFile": "cypress/integration/e2e/0-navigation.spec.js",
+      "file": "cypress/integration/e2e/0-navigation.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fe221caf-f455-417b-8a03-dd5679b8b442",
+          "title": "Checks all links are active and correct page loaded",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Links have hrefs and return status 200",
+              "fullTitle": "Checks all links are active and correct page loaded Links have hrefs and return status 200",
+              "timedOut": null,
+              "duration": 5757,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.get('a').each(page => {\n  cy.request(page.prop('href')).its('status').should('eq', 200);\n});",
+              "err": {},
+              "uuid": "0c2a127d-762a-4d44-9b01-9b3b34ee7d87",
+              "parentUUID": "fe221caf-f455-417b-8a03-dd5679b8b442",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicks \"next.js\" link",
+              "fullTitle": "Checks all links are active and correct page loaded Clicks \"next.js\" link",
+              "timedOut": null,
+              "duration": 3354,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Next.js').click();\ncy.url().should('eq', 'https://nextjs.org/');\ncy.go('back');",
+              "err": {},
+              "uuid": "bc41e171-9f0a-4058-a5fd-2d736f3e091b",
+              "parentUUID": "fe221caf-f455-417b-8a03-dd5679b8b442",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicks \"dynamic-routing\" link",
+              "fullTitle": "Checks all links are active and correct page loaded Clicks \"dynamic-routing\" link",
+              "timedOut": null,
+              "duration": 1231,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Dynamic Routing and Static Generation').click();\ncy.location('pathname').should('eq', '/posts/dynamic-routing');\ncy.contains('Blog').click();\ncy.url().should('eq', 'http://localhost:3000/');",
+              "err": {},
+              "uuid": "8b2dda56-7894-4237-a8e6-db2e1d3655a5",
+              "parentUUID": "fe221caf-f455-417b-8a03-dd5679b8b442",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicks \"hello-world\" link",
+              "fullTitle": "Checks all links are active and correct page loaded Clicks \"hello-world\" link",
+              "timedOut": null,
+              "duration": 1283,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Learn How to Pre-render Pages').click();\ncy.location('pathname').should('eq', '/posts/hello-world');\ncy.contains('Blog').click();\ncy.url().should('eq', 'http://localhost:3000/');",
+              "err": {},
+              "uuid": "5b4f07ae-6c75-4c00-8d39-06a43ed0ebba",
+              "parentUUID": "fe221caf-f455-417b-8a03-dd5679b8b442",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicks \"preview\" link",
+              "fullTitle": "Checks all links are active and correct page loaded Clicks \"preview\" link",
+              "timedOut": null,
+              "duration": 1050,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Preview Mode for Static Generation').click();\ncy.location('pathname').should('eq', '/posts/preview');\ncy.contains('Blog').click();\ncy.url().should('eq', 'http://localhost:3000/');",
+              "err": {},
+              "uuid": "56b23406-f684-42bb-8e8f-679d941c7edc",
+              "parentUUID": "fe221caf-f455-417b-8a03-dd5679b8b442",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c2a127d-762a-4d44-9b01-9b3b34ee7d87",
+            "bc41e171-9f0a-4058-a5fd-2d736f3e091b",
+            "8b2dda56-7894-4237-a8e6-db2e1d3655a5",
+            "5b4f07ae-6c75-4c00-8d39-06a43ed0ebba",
+            "56b23406-f684-42bb-8e8f-679d941c7edc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12675,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -7,6 +7,7 @@ export default function CoverImage({ title, src, slug, height, width }) {
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
+      data-testid={`coverImg-${slug}`}
       className={cn('shadow-sm', {
         'hover:shadow-md transition-shadow duration-200': slug,
       })}
@@ -18,8 +19,8 @@ export default function CoverImage({ title, src, slug, height, width }) {
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a aria-label={title}>{image}</a>
+        <Link as={`/posts/${slug}`} href="/posts/[slug]" >
+          <a data-testid={`coverLink-${slug}`} aria-label={title}>{image} </a>
         </Link>
       ) : (
         image

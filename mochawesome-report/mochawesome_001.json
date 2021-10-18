@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-10-18T09:11:58.571Z",
+    "end": "2021-10-18T09:12:07.732Z",
+    "duration": 9161,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d256a983-562a-4fff-ba4c-ad695b80d631",
+      "title": "",
+      "fullFile": "cypress/integration/e2e/1-homepage.spec.js",
+      "file": "cypress/integration/e2e/1-homepage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0a418402-84b9-47d1-adcb-5a638cd9f0b9",
+          "title": "More Stories tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hello world post has expected picture and link is defined",
+              "fullTitle": "More Stories tests Hello world post has expected picture and link is defined",
+              "timedOut": null,
+              "duration": 9144,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-testid=\"coverImg-hello-world\"]') //.should('be.visible')\n.should('have.attr', 'src').and('include', 'hello-world%2Fcover.jpg');\ncy.get('[data-testid=\"coverLink-hello-world\"]').and('have.attr', 'href').and('include', '/posts/hello-world');",
+              "err": {
+                "message": "Error: EPERM: operation not permitted, open 'C:\\Users\\Zurking\\Documents\\GitRepo\\Cypress-Blog-Starter\\cypress\\screenshots\\e2e\\1-homepage.spec.js\\More Stories tests -- Hello world post has expected picture and link is defined (failed).png'",
+                "estack": "Error: EPERM: operation not permitted, open 'C:\\Users\\Zurking\\Documents\\GitRepo\\Cypress-Blog-Starter\\cypress\\screenshots\\e2e\\1-homepage.spec.js\\More Stories tests -- Hello world post has expected picture and link is defined (failed).png'\n\n",
+                "diff": null
+              },
+              "uuid": "0f41f0f0-363f-4a3e-93fb-439d371523cd",
+              "parentUUID": "0a418402-84b9-47d1-adcb-5a638cd9f0b9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0f41f0f0-363f-4a3e-93fb-439d371523cd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9144,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

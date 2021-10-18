@@ -3,7 +3,11 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "delete:reportFolder": "del-cli --force ./mochawesome-report",
+    "test:cli": "npm run delete:reportFolder && cypress run",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
   },
   "dependencies": {
     "classnames": "2.2.6",
@@ -12,12 +16,26 @@
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "remark": "13.0.0",
-    "remark-html": "13.0.1"
+    "remark": "13.0.0"
   },
   "devDependencies": {
+    "@cypress/react": "^5.10.1",
+    "@cypress/webpack-dev-server": "^1.6.0",
+    "@testing-library/cypress": "^8.0.1",
+    "acorn": "^8.5.0",
     "autoprefixer": "^10.2.1",
+    "cypress": "^8.6.0",
+    "del-cli": "^4.0.1",
+    "html-webpack-plugin": "^5.4.0",
+    "mocha": "^9.1.3",
+    "mochawesome": "^6.3.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
     "postcss": "^8.2.4",
-    "tailwindcss": "^2.0.2"
+    "remark-html": "^13.0.1",
+    "set-value": "^4.0.1",
+    "tailwindcss": "^2.0.2",
+    "webpack": "^5.58.2",
+    "webpack-dev-server": "^4.3.1"
   }
 }

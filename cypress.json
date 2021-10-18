@@ -1,0 +1,16 @@
+{
+    "baseUrl": "http://localhost:3000/",
+    "ignoreTestFiles" : ["**/1-getting-started/*", "**/2-advanced-examples/*"],
+    "viewportHeight": 1080,
+    "viewportWidth": 1920,
+    "chromeWebSecurity": false, 
+    "video": false,
+    "videoCompression": false,
+
+    "reporter": "../node_modules/mochawesome/src/mochawesome.js",
+    "reporterOptions": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+    }
+}
