@@ -3,11 +3,19 @@
 Initial set up run
 
 ```
-npx create-next-app --example blog-starter blog-starter-app
+npm install
 
 ```
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+The repo includes the blog-starter-app. I've added my own changes to some components in the app to help access certain selectors for Cypress.
+
+To launch the app run;
+
+```
+npm run dev
+
+``
+Your blog should be up and running on http://localhost:3000! If it doesn't work, post on GitHub discussions.
 
 # Install Cypress
 
